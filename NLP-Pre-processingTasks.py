@@ -52,7 +52,7 @@ class Preprocessing:
         words = [word for word in word_tokenize(text) if word not in self.stop_words]
         return ' '.join(words)
 
-    def process(self, file_path='news.csv', nrows=10, skiprows=[]):
+    def process(self, file_path='sample_news.csv', nrows=10, skiprows=[]):
         print("Process method started")
 
         try:
@@ -77,5 +77,5 @@ class Preprocessing:
 
 if __name__ == "__main__":
     preprocessor = Preprocessing()
-    corpus = preprocessor.process(file_path='news.csv', nrows=10)
+    corpus = preprocessor.process(file_path='sample_news.csv', nrows=10)
     print("Processed Corpus:", corpus)
